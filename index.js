@@ -242,9 +242,17 @@ console.log(PuanaGoreDegerlendirmeAl(degerlendirmeler, 4));
 	
 */
 
-function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
-  /* Kodlar buraya */
+function UzunDegerlendirmeleriAl(aDegerlendirmeler) {
+  const uzunDegerlendirmeler = [];
+  for (let i = 0; i < aDegerlendirmeler.length; i++) {
+    if (aDegerlendirmeler[i].geribildirim.split(" ").length > 15) {
+      uzunDegerlendirmeler.push(aDegerlendirmeler[i]);
+    }
+  }
+  return uzunDegerlendirmeler;
 }
+
+console.log(UzunDegerlendirmeleriAl(degerlendirmeler));
 
 /*  BONUS 3:  
 	Bu ek görevde degerlendirmeler dizisi kullanılmayacak!  Bu görevde kendi nesnenizi yaratmanız gerekmektedir.
