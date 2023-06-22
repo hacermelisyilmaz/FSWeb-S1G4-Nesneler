@@ -271,9 +271,17 @@ console.log(UzunDegerlendirmeleriAl(degerlendirmeler));
 	Bu 110 döndürmelidir çünkü başlangıç kilometre sayacını 10 olarak tanımladık ve 100 km arabayı sürdük.
 */
 
-function arabaYapici(/* Kodlar buraya */) {
-  /* Kodlar buraya */
+function arabaYapici(aSayac) {
+  const araba = {
+    surus: function (mesafe) {
+      return mesafe + aSayac;
+    },
+  };
+  return araba;
 }
+
+const araba1 = arabaYapici(10);
+console.log(araba1.surus(100));
 
 /*  Buradan aşağıdaki kodları değiştirmeyin lütfen */
 function sa() {
