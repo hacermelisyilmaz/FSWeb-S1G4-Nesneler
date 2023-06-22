@@ -142,9 +142,19 @@ console.log(degerlendirmeler);
 	4. Güncellenmiş diziyi döndürecek
 */
 
-function DegerlendirmeEkle(/*Kodlar buraya */) {
-  /*Kodlar buraya */
+function DegerlendirmeEkle(aDegerlendirmeler, aIsim, aPuan, aGeribildirim) {
+  const yeniDegerlendirme = {
+    isim: aIsim,
+    puan: aPuan,
+    geribildirim: aGeribildirim,
+  };
+  aDegerlendirmeler.push(yeniDegerlendirme);
+  return aDegerlendirmeler;
 }
+
+console.log(
+  DegerlendirmeEkle(degerlendirmeler, "Hurşut", 2, "Boktan yemekler!")
+);
 
 /*  Görev 6: 
 	Dizideki değerlendirmelerin anahtarına(key,index) bağlı olarak bir değerlendirme döndüren bir fonksiyon yazın
