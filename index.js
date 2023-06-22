@@ -220,9 +220,20 @@ console.log(SonDegerlendirmeyiAl(degerlendirmeler));
 	]
 */
 
-function PuanaGoreDegerlendirmeAl(/* Kodlar buraya */) {
-  /* Kodlar buraya */
+function PuanaGoreDegerlendirmeAl(aDegerlendirmeler, aPuan) {
+  const araliktakiDegerler = [];
+  for (let i = 0; i < aDegerlendirmeler.length; i++) {
+    if (
+      aDegerlendirmeler[i].puan >= aPuan &&
+      aDegerlendirmeler[i].puan <= 4.9
+    ) {
+      araliktakiDegerler.push(aDegerlendirmeler[i]);
+    }
+  }
+  return araliktakiDegerler;
 }
+
+console.log(PuanaGoreDegerlendirmeAl(degerlendirmeler, 4));
 
 /*  BONUS 2:    
 	UzunDegerlendirmeleriAl fonksiyonuna aşağıdakileri uygulayın:
