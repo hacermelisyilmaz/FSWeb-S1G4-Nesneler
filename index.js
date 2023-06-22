@@ -126,6 +126,11 @@ console.log(degerlendirmeler[degerlendirmeler.length - 3].geribildirim);
 	2. degerlendirmeler dizisini konsolda görüntüleyerek çalışmanızı kontrol edin
 */
 
+degerlendirmeler[degerlendirmeler.length - 1].geribildirim =
+  "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım";
+
+console.log(degerlendirmeler);
+
 /*  Görev 5: 
 	isim, puan, geribildirim'i içeren bir değerlendirme nesnesi oluşturup, yeni değerlendirmeyi mevcut dizinin(array) sonuna ekleyip sonuç dizisini döndüren bir fonksiyon tanımlayın. 
 	
