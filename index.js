@@ -191,9 +191,18 @@ console.log(AnahtardanDegerlendirmeAl(degerlendirmeler, 0));
 	Not: Eğer 4. görevi başarıyla yaptıysanız kişinin geribildirimi boş görünmemeli
 */
 
-function SonDegerlendirmeyiAl(/*Kodlar buraya*/) {
-  /*Kodlar buraya*/
+function SonDegerlendirmeyiAl(aDegerlendirmeler) {
+  const sonDegerlendirme = aDegerlendirmeler[aDegerlendirmeler.length - 1];
+  return (
+    sonDegerlendirme.isim +
+    " isimli kişi " +
+    sonDegerlendirme.puan +
+    " puan verdi ve şunları yazdı: " +
+    sonDegerlendirme.geribildirim
+  );
 }
+
+console.log(SonDegerlendirmeyiAl(degerlendirmeler));
 
 /////////////// BONUS  GÖRVLER////////////////////
 
