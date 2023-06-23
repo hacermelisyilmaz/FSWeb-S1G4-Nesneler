@@ -60,7 +60,7 @@ const burger = {
   indirim: function (aMusteri) {
     if (aMusteri === "öğretmen" || aMusteri === "öğrenci") {
       return 0.75 * burger.fiyat;
-    } else {
+    } else if (aMusteri === "diğer") {
       return 0.9 * burger.fiyat;
     }
   },
@@ -168,13 +168,22 @@ console.log(
 
 function AnahtardanDegerlendirmeAl(aDegerlendirmeler, index) {
   const degerlendirme = aDegerlendirmeler[index];
-  return (
+  // object destructuring (alternatif ek çalışma)
+  const str = `${degerlendirme.isim} isimli kişi ${degerlendirme.puan} puan verdi ve şunları yazdı: ${degerlendirme.geribildirim}`;
+  return str;
+}
+
+//veya backtick (``) kullanırız
+
+function AnahtardanDegerlendirmeAl(aDegerlendirmeler, index) {
+  const degerlendirme = aDegerlendirmeler[index];
+
+  const str =
     degerlendirme.isim +
     " isimli kişi " +
     degerlendirme.puan +
     " puan verdi ve şunları yazdı: " +
-    degerlendirme.geribildirim
-  );
+    degerlendirme.geribildirim;
 }
 
 console.log(AnahtardanDegerlendirmeAl(degerlendirmeler, 0));
